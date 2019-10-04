@@ -1,6 +1,6 @@
 import React from 'react';
 import useDarkMode from './hooks/useDarkMode';
-
+import { Button} from "semantic-ui-react";
 
 const Navbar = (key,storedValue) => {
   const [darkMode, setDarkMode] = useDarkMode(storedValue);
@@ -12,13 +12,10 @@ const Navbar = (key,storedValue) => {
   }
   return (
     <nav className="navbar">
-      <h1>Most Searched Tennis Stars</h1>
-      <div className="dark-mode__toggle" onClick={toggleMode}>
-        <div
-           onClick={useDarkMode}
-          className={darkMode ? 'toggle toggled' : 'toggle'}
-        />
-      </div>
+      <h1>Most Searched Tennis</h1>
+      <Button className='toggle-button' toggle onClick={toggleMode}>
+       Dark Mode
+      </Button>
     </nav>
   );
 }

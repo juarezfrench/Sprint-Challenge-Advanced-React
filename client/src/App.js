@@ -1,17 +1,16 @@
-import React from 'react';
-
-import PlayersList from './PlayersList'
-import './App.css';
+import React from "react";
+import NavBar from './NavBar'
+import PlayersList from "./PlayersList";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      
-      <h1>Most Searched World Class Players</h1> 
-        <PlayersList/>
-           
-    </div>
-  );
+	return (
+		<div className="App">
+		
+			<NavBar/>
+			<PlayersList />
+		</div>
+	);
 }
 
 export default App;

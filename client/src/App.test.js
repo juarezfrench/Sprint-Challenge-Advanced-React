@@ -1,27 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as rtl from '@testing-library/react';
-import mockAxios from 'axios';
+import {render} from '@testing-library/react';
 import PlayersList from './PlayersList';
 import App from './App';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  rtl.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+  //  ReactDOM.unmountComponentAtNode(div);
+})
 
-it('should run an axios call', done => {
-  PlayersList.AxiosCall('/test', {}).then(response => {
-    expect(response).toEqual({
-      data: {},
-    });
+// test('Cards are processed', () => {
+//   const { getByText } =  render(App);
+//   expect(<Players/>).toBeDefined()
+ 
+// });
+
+test('should render correctly', async () => {
+  expect(render(
+    <App/>
+  )).toMatchSnapshot() 
+  })
+
+  test('Cards are processed', () => {
+    const { getByText } =  render(<App/>);
+    expect(<PlayersList/>).toBeDefined()
+   
   });
-  expect(mockAxios.request).toHaveBeenCalledWith({
-    method: 'get',
-    url: '/test'
-  });
-  expect(mockAxios.request).toHaveBeenCalledTimes(1);
-  expect(consoleError).not.toHaveBeenCalled();
-  done();
-});
+
+  test('should mount correctly', () => {
+    const div = document.createElement('div')
+    expect(ReactDOM.render( <App/>,div)).toMatchSnapshot()
+    })

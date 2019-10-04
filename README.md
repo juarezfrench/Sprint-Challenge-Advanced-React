@@ -31,14 +31,14 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Run `yarn` to download dependencies.
-- [ ] Run the server using `yarn start` or `node server.js`.
-- [ ] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
-- [ ] Still inside the `client` folder run `yarn start` to run the client application.
+- [c] Create a forked copy of this project.
+- [c] Add TL as collaborator on Github.
+- [c] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [c] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [c] Run `yarn` to download dependencies.
+- [c] Run the server using `yarn start` or `node server.js`.
+- [c] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
+- [c] Still inside the `client` folder run `yarn start` to run the client application.
 - [ ] Implement the project on this Branch, **committing progress & changes often.**
 - [ ] Push commits: `git push origin <firstName-lastName>`.
 
